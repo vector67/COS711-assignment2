@@ -3,7 +3,7 @@ from scipy import stats
 from scipy.stats import zscore
 from sklearn.decomposition import PCA
 
-from src.constants import PERCENTAGE_TRAIN, PERCENTAGE_GLOBAL_TEST
+from constants import PERCENTAGE_TRAIN, PERCENTAGE_GLOBAL_TEST
 
 
 def normalize(data):
