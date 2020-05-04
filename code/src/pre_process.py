@@ -7,7 +7,7 @@ from constants import PERCENTAGE_TRAIN, PERCENTAGE_GLOBAL_TEST
 
 
 def normalize(data):
-    print('data', data)
+    # print('data', data)
     data = data[(np.abs(stats.zscore(data[:, :-1])) < 3).all(axis=1)]
     data_zscore = zscore(data[:, :-1], axis=0, ddof=1)
     for i in range(11):
@@ -64,5 +64,5 @@ def do_pre_process(data):
     train_labels, test_labels = np.array_split(labels, [int(len(labels) * PERCENTAGE_TRAIN)])
     test_labels, global_labels = np.array_split(test_labels, [int(len(test_labels) * PERCENTAGE_GLOBAL_TEST)])
 
-    print(len(train_data), len(train_labels), len(test_data), len(test_labels))
+    # print(len(train_data), len(train_labels), len(test_data), len(test_labels))
     return train_data, train_labels, test_data, test_labels
