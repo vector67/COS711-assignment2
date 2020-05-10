@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8138b25-8a4d-46ff-b6e2-4c03a39416cf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/best_order.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output/best_order.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../report/u16010648assignment2.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../report/u16010648assignment2.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../report/u16010648assignment2.log" beforeDir="false" afterPath="$PROJECT_DIR$/../report/u16010648assignment2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../report/u16010648assignment2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../report/u16010648assignment2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../report/u16010648assignment2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../report/u16010648assignment2.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +179,7 @@
       <workItem from="1588498521138" duration="12111000" />
       <workItem from="1588570403450" duration="3668000" />
       <workItem from="1588576720711" duration="13025000" />
-      <workItem from="1589125255574" duration="4878000" />
+      <workItem from="1589125255574" duration="5418000" />
     </task>
     <servers />
   </component>
