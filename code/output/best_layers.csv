@@ -1,0 +1,4 @@
+Dense(86) softmax|Dense(10) exponential|Dense(52) softplus|Dense(80) sigmoid|Dense(3) sigmoid|Dense(41) exponential|Dense(46) selu,93
+Dense(63) softmax|Dense(47) softplus|Dense(61) elu|Dense(47) softmax,73
+Dense(86) softmax|Dense(10) exponential|Dense(52) softplus|Dense(80) sigmoid|Dense(3) sigmoid|Dense(41) relu|Dense(46) selu,0
+Dense(86) softmax|Dense(10) exponential|Dense(52) softplus|Dense(80) sigmoid|Dense(3) sigmoid|Dense(41) exponential|Dense(46) softplus,0

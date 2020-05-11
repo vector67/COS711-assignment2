@@ -88,10 +88,20 @@ The final step was to split the data into training/testing and global generaliza
 The neural network was created in Tensorflow with Keras as the backend. I did a lot of experimentation trying to work out which particular parameters ended up creating the best and quickest convergence. Not everything that I did I have graphs for, but the most important stuff I do. The loss function that I used was categorical cross entropy (ish, I'll discuss the loss function below since it has some interesting quirks and rationale behind it). I decided on this because it seems to be the standard for measuring loss on categorical data across the sources that I reviewed.
 \\\\
 The input layer uses the tanh activation function. The hidden layers ended up just being a set of five layers with 9 neurons each all with activation function tanh. The output layer has 10 neurons with sigmoid activation. The input activation function is tanh because as soon as I tried any other activation function I immediately got a NaN loss in tensorflow. It seems to be because of the range of the output combined with the loss function which is categorical crossentropy which has issues with predictions of exactly zero since it has to do the log of that which causes undefined math operations. The hidden layers are all tanh since that had the best accuracy at a low number of epochs and a comparable accuracy further on. See fig 1 and 2 which compared relu, tanh, sigmoid and linear over 500 epochs running each model 100 times. Interestingly sigmoid is absolutely terrible up until about generation 300, and I have no idea why this might be.
+\begin{figure}
+  \includegraphics[width=\linewidth]{figs/different_activation_types_loss.png}
+  \caption{Epoch number vs loss for four different activation functions}
+  \label{fig:activation_type_loss}
+\end{figure}
+\begin{figure}
+  \includegraphics[width=\linewidth]{figs/different_activation_types_accuracy.png}
+  \caption{Epoch number vs model accuracy for four different activation functions}
+  \label{fig:activation_type_accuracy}
+\end{figure}
 \\\\
 <Justify number of hidden layers>
 \\\\
-Because of the data shown in fig 1 and 2 I decided to have a minimum of 200 epochs with an ending function. This function takes a look at the last five epochs. For each epoch it considers the loss function result on the test data and compares that to the result for the current epoch. If 3 out of the most recent five have lower losses than the current epoch then the training is aborted. This exact function seems to strike an excellent balance between stopping too early based on a false positive and stopping too late because it didn't see the trend. As soon as the test loss starts increasing consistently it stops the training. This tends to happen right around the 200 epoch mark hence my use of 200 as my minimum epoch number.
+Because of the data shown in figure \ref{fig:activation_type_loss} and \ref{fig:activation_type_accuracy} I decided to have a minimum of 200 epochs with an ending function. This function takes a look at the last five epochs. For each epoch it considers the loss function result on the test data and compares that to the result for the current epoch. If 3 out of the most recent five have lower losses than the current epoch then the training is aborted. This exact function seems to strike an excellent balance between stopping too early based on a false positive and stopping too late because it didn't see the trend. As soon as the test loss starts increasing consistently it stops the training. This tends to happen right around the 200 epoch mark hence my use of 200 as my minimum epoch number.
 \\\\
 <Justify batch size>
 

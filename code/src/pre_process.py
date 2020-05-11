@@ -56,7 +56,7 @@ def do_pre_process(data):
     data_processed, labels = pre_process(np.array(data))
     pca = PCA(.95)
     pca.fit(data_processed)
-    # data_processed = pca.transform(data_processed)
+    data_processed = pca.transform(data_processed)
 
     train_data, test_data = np.array_split(data_processed, [int(len(data_processed) * PERCENTAGE_TRAIN)])
     test_data, global_test_data = np.array_split(test_data, [int(len(test_data) * PERCENTAGE_GLOBAL_TEST)])
